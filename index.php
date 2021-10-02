@@ -24,7 +24,7 @@
                         <h5 class="card-title">Homework 1</h5>
                         <h6 class="card-subtitle mb-2 text-muted">Sept 18, 2021</h6>
                         <p class="card-text">In this homework, you have to setup your own web prorgramming environment.</p>
-                        <a href="/homework1/" class="card-link">Checkout</a>
+                        <a href="/homework1/" class="card-link">Checkout Homework 1</a>
                         <a href="https://github.com/krishnagupta71/cmpe272/blob/main/homework1.php" class="card-link" target="_blank">Github</a>
                     </div>
                 </div>
@@ -35,7 +35,7 @@
                         <h5 class="card-title">Homework 2</h5>
                         <h6 class="card-subtitle mb-2 text-muted">Sept 25, 2021</h6>
                         <p class="card-text">Using your newly obtained web hosting solution. Create a company web site</p>
-                        <a href="/homework2/" class="card-link">Checkout</a>
+                        <a href="/homework2/" class="card-link">Checkout Homework 2</a>
                         <a href="https://github.com/krishnagupta71/cmpe272/blob/main/homework1.php" class="card-link" target="_blank">Github</a>
                     </div>
                 </div>
