@@ -51,6 +51,17 @@
                     </div>
                 </div>
             </div>
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Homework 4</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Oct 3, 2021</h6>
+                        <p class="card-text">Create a mySQL database for your company web site</p>
+                        <a href="homework4/" class="card-link">Checkout Homework 4</a>
+                        <a href="https://github.com/krishnagupta71/cmpe272/" class="card-link" target="_blank">Github</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>
