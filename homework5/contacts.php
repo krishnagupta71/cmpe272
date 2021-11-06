@@ -6,6 +6,18 @@
     <title>Homework 2</title>
     <?php ob_start(); ?>
 </head>
+<?php
+$myfile = fopen("../txt/contacts.txt", "r") or die("Unable to open file!");
+$contactText = fread($myfile, filesize("../txt/contacts.txt"));
+fclose($myfile);
+$contactInfoArray = explode("\n", $contactText);
+$name = $contactInfoArray[0];
+$phone = $contactInfoArray[1];
+$email = $contactInfoArray[2];
+$linkedIn = explode("LinkedIn: ", $contactInfoArray[3])[1];
+$github = explode("Github: ", $contactInfoArray[4])[1];
+
+?>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -26,13 +38,13 @@
                         <a class="nav-link" href="about.php">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Products</a>
+                        <a class="nav-link" href="products.php">Products</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="news.php">News</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contacts.php">Contacts</a>
+                        <a class="nav-link active" href="contacts.php">Contacts</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="users.php">Users</a>
@@ -42,16 +54,27 @@
             </div>
         </div>
     </nav>
-    <main>
-        <div class="px-4 py-5 my-5 text-center">
-            <h1 class="display-5 fw-bold">Our Products</h1>
-            <div class="col-lg-6 mx-auto">
-                <p class="lead mb-4">Shop our high-quality whey protein powders, shakes, and blends for supplements designed to support the growth and maintenance of your muscle mass.</p>
+
+    <div class="container">
+        <div class="row my-2">
+            <div class="col-2"></div>
+            <div class="col-10">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Contact us</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Contact data coming from contacts.txt</h6>
+
+                        <p class="card-text"><?= $name ?></p>
+                        <p class="card-text"><?= $phone ?></p>
+                        <p class="card-text"><?= $email ?></p>
+                        <a href="<?= $linkedIn ?>" class="card-link" target="_blank">LinkenIn</a>
+                        <a href="<?= $github ?>" class="card-link" target="_blank">Github</a>
+                    </div>
+                </div>
             </div>
-            
+            <div class="col-2"></div>
         </div>
-        <hr>
-    </main>
+    </div>
 </body>
 
 </html>

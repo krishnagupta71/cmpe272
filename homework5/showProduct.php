@@ -1,10 +1,30 @@
+<?php require "dbconnect.php" ?>
+<?php
+
+$sql = "SELECT * FROM product WHERE id=" . $_POST["id"];
+$result = $conn->query($sql);
+while ($row = $result->fetch_assoc()) {
+    $image = "../assets/" . $row["image"] . ".jpg";
+    $price = $row["price"];
+    $desc = $row["desc"];
+    $name = $row["name"];
+    $id = $row["id"];
+}
+
+if (!isset($_COOKIE["lastSeenProds"])) {
+    setcookie("lastSeenProds",  "" . $id, time() + (86400 * 30), "/"); // 86400 = 1 day
+} else {
+    $products = $_COOKIE["lastSeenProds"] . "," . $id;
+    setcookie("lastSeenProds",  $products, time() + (86400 * 30), "/");
+}
+
+?>
 <!DOCTYPE html>
 <html>
 
 <head>
     <?php require "../head.php" ?>
-    <title>Homework 2</title>
-    <?php ob_start(); ?>
+    <title>Enterprise Software Platforms</title>
 </head>
 
 <body>
@@ -26,7 +46,7 @@
                         <a class="nav-link" href="about.php">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Products</a>
+                        <a class="nav-link active" href="products.php">Products</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="news.php">News</a>
@@ -42,16 +62,30 @@
             </div>
         </div>
     </nav>
+
     <main>
-        <div class="px-4 py-5 my-5 text-center">
-            <h1 class="display-5 fw-bold">Our Products</h1>
-            <div class="col-lg-6 mx-auto">
-                <p class="lead mb-4">Shop our high-quality whey protein powders, shakes, and blends for supplements designed to support the growth and maintenance of your muscle mass.</p>
+        <div class="container">
+            <div class="row my-2 row justify-content-evenly">
+                <div class="col-4 my-2">
+                    <?php
+                    echo '<img src=' . $image . ' class="d-block w-100" alt="..." style="height: 25rem; width: 25rem">';
+                    ?>
+
+                </div>
+                <div class="col-8 my-2">
+                    <?php
+                    echo '<h3>' . $name . '</h3>
+                    <p>' . $desc . '</p>
+                    <p>Price: ' . $price . '</p>';
+                    ?>
+
+                </div>
             </div>
-            
+
         </div>
-        <hr>
     </main>
 </body>
+
+
 
 </html>
