@@ -73,6 +73,17 @@
                     </div>
                 </div>
             </div>
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Homework 6</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Nov 6, 2021</h6>
+                        <p class="card-text">Make use of curl to read user list from friend's website</p>
+                        <a href="homework6/" class="card-link">Checkout Homework 6</a>
+                        <a href="https://github.com/krishnagupta71/cmpe272/" class="card-link" target="_blank">Github</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>
