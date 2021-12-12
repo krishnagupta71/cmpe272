@@ -20,7 +20,8 @@ if (!isset($_SESSION["user"])) {
                 <img src="../assets/logo1.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
                 MarketPlace
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -45,32 +46,52 @@ if (!isset($_SESSION["user"])) {
     <main role="main">
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                    aria-label="Slide 2"></button>
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img src="../assets/image1.jpg" class="d-block w-100" alt="..." style="height: 35rem;">
                     <div class="carousel-caption d-none d-md-block">
-                        <h3 class="bg-light text-dark">Best in Class Whey Protien</h5>
-                            <p>Premium whey packed with 21g of protein per serving, for the everyday protein you need
-                                from a quality source.</p>
+                        <h3 class="bg-light text-dark">MuscleTron - Best in Class Whey Protien</h5>
                     </div>
                 </div>
 
                 <div class="carousel-item">
-                    <img src="../assets/image3.jpg" class="d-block w-100" alt="..." style="height: 35rem;">
+                    <img src="../assets/images/bg_3.jpg" class="d-block w-100" alt="..." style="height: 35rem;">
                     <div class="carousel-caption d-none d-md-block">
-                        <h3 class="bg-light text-dark">USE CODE - OCTSALE</h5>
-                            <p>Delivered within 5-8 working days. Hawaii and Alaska may take up to 14 days</p>
+                        <h3 class="bg-light text-dark">FlyWithUs - Find Travel Packages around the world</h5>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="../assets/apparelStoreBg.jfif" class="d-block w-100" alt="..." style="height: 35rem;">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3 class="bg-light text-dark">Apparel Store</h5>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="https://www.gannett-cdn.com/presto/2020/09/10/USAT/636a3c3d-3b95-4f84-b492-e01b4b0794b4-Sunflower1.jpg"
+                        class="d-block w-100" alt="..." style="height: 35rem;">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3 class="bg-light text-dark">Flora Aura</h5>
                     </div>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
@@ -79,7 +100,7 @@ if (!isset($_SESSION["user"])) {
         <div class="container">
             <div class="row my-2">
                 <div class="col-7">
-                    <p class="text-start fs-1 lh-1">Protein Bars and Protein Shakes</p>
+                    <p class="text-start fs-1 lh-1">MuscleTron</p>
                     <p class="text-start fs-6">For maximum muscle growth, protein requirements of strength training
                         athletes are higher than sedentary individuals and may be higher yet in individuals who are
                         lean, training hard, and in a caloric deficit (for example bodybuilders dieting for a
@@ -88,7 +109,8 @@ if (!isset($_SESSION["user"])) {
                         needs.</p>
                 </div>
                 <div class="col-5">
-                    <img src="../assets/protienBar.jpeg" class="d-block w-100" alt="..." style="height: 25rem; width: 25rem">
+                    <img src="../assets/protienBar.jpeg" class="d-block w-100" alt="..."
+                        style="height: 25rem; width: 25rem">
                 </div>
             </div>
             <hr>
@@ -96,28 +118,41 @@ if (!isset($_SESSION["user"])) {
         <div class="container">
             <div class="row my-2">
                 <div class="col-5">
-                    <img src="../assets/creatine.jpg" class="d-block w-100" alt="..." style="height: 25rem; width: 25rem">
+                    <img src="https://www.gannett-cdn.com/presto/2020/09/10/USAT/636a3c3d-3b95-4f84-b492-e01b4b0794b4-Sunflower1.jpg"
+                        class="d-block w-100" alt="..." style="height: 25rem; width: 25rem">
                 </div>
                 <div class="col-7">
-                    <p class="text-start fs-1 lh-1">Creatine Monohydrate</p>
-                    <p class="text-start fs-6">The International Society of Sports Nutrition has called creatine
-                        monohydrate the most ergogenic and safe supplement legally available. This is based upon
-                        numerous studies which have found increases in muscle size and strength when creatine
-                        monohydrate is added to a resistance training program, without any adverse health effects</p>
+                    <p class="text-start fs-1 lh-1">Flora Aura </p>
+                    <p class="text-start fs-6">For over 25 years, Flora Aurais helping you to celebrate your special
+                        moments by delivering fresh flowers and fabulous gifts to your loved one s.
+                        Ferns N Petals was established in 1994 and flower bouquet delivery was the first and only thing
+                        that we were doing. From there on, FNP grew to what it is today including the current gifting
+                        options that feature the choicest personalized gifts, cakes, chocolates along with artificial
+                        flowers f resh cut flowers and flower basket. From just 1 flower shop in Delhi during 1994,
+                        Ferns N Petals is now the largest florist chain with more than 300+ stores (and still counting)
+                        across all the major cities and towns of India.
+                        Along with the widest distribution network, our strong physical & onli ne presence makes us the
+                        best choice to send flowers & gifts for deliveries across India and around the globe. The
+                        remarkable distribution network of FNP and the sheer number of retail stores that we have, is
+                        something no other online florist and gift delivery service in India can boast about and th is
+                        is one of the biggest factors that differentiates us from the competition. We bank upon the
+                        smiles of our 6 million happy customers with the quality.</p>
                 </div>
             </div>
             <hr>
             <div class="container">
                 <div class="row my-2">
                     <div class="col-7">
-                        <p class="text-start fs-1 lh-1">Caffeine</p>
-                        <p class="text-start fs-6">Caffeine is commonly consumed as a pre-workout stimulant. Consumption
-                            of caffeine has been shown to increase muscular power, endurance, and exercise performance
-                            in athletes in a tired or sleep-deprived state supporting the use of caffeine pre-workout to
-                            improve performance.</p>
+                        <p class="text-start fs-1 lh-1">FlyWithUs</p>
+                        <p class="text-start fs-6">Far far away, behind the word mountains, far from the countries
+                            Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
+                            right at the coast of the Semantics, a large language ocean. A small river named Duden flows
+                            by their place and supplies it with the necessary regelialia. It is a paradisematic country,
+                            in which roasted parts of sentences fly into your mouth.</p>
                     </div>
                     <div class="col-5">
-                        <img src="../assets/coffee.png" class="d-block w-100" alt="..." style="height: 25rem; width: 25rem">
+                        <img src="../assets/images/bg_2.jpg" class="d-block w-100" alt="..."
+                            style="height: 25rem; width: 25rem">
                     </div>
                 </div>
             </div>
