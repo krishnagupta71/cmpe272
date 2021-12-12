@@ -58,7 +58,7 @@ $reviews = $conn->query($sql);
 
                 </ul>
                 <form action="logout.php">
-                    <button style="margin-left:70vw;" type="submit" class="btn btn-outline-light">Logout</button>
+                    <button style="margin-left:60vw;" type="submit" class="btn btn-outline-light">Logout</button>
                 </form>
             </div>
         </div>
