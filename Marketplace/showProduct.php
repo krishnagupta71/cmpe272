@@ -31,7 +31,7 @@ $reviews = $conn->query($sql);
 
 <head>
     <?php require "../head.php" ?>
-    <title>Enterprise Software Platforms</title>
+    <title>Marketplace</title>
 </head>
 
 <body>

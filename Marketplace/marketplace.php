@@ -22,7 +22,7 @@ if (isset($_GET['market'])) {
 
 <head>
     <?php require "../head.php" ?>
-    <title>Homework 6</title>
+    <title>Marketplace</title>
     <?php ob_start(); ?>
 </head>
 
