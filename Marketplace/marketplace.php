@@ -241,7 +241,7 @@ if (isset($_GET['market'])) {
                                         <p class="card-text">
                                             ' . $desc . '
                                         </p>
-                                        <a href="/marketplace/showProduct.php?id=' . $id . '" class="btn btn-primary" name="id">Checkout</a>
+                                        <a href="cmpe272/marketplace/showProduct.php?id=' . $id . '" class="btn btn-primary" name="id">Checkout</a>
                                     </div>
                                 </div>
                             </div>';
