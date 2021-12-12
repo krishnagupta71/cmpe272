@@ -1,24 +1,30 @@
 <?php require "dbconnect.php" ?>
 <?php
-
-$sql = "SELECT * FROM product WHERE id=" . $_POST["id"];
+$productId = $_GET['id'];
+$sql = "SELECT * FROM product WHERE id = " . $productId;
 $result = $conn->query($sql);
 while ($row = $result->fetch_assoc()) {
     $image = "../assets/" . $row["image"] . ".jpg";
+    if ($row["marketplace"] == "manasa") {
+        $image =  $row["image"];
+    }
     $price = $row["price"];
     $desc = $row["desc"];
     $name = $row["name"];
     $id = $row["id"];
     $rating = $row["rating"];
+    $visited = intval($row["visited"]) + 1;
+
+    $sql = "UPDATE product SET visited = " . $visited . " WHERE id = '" . $productId . "'";
+    $result = $conn->query($sql);
+    break;
 }
 
-if (!isset($_COOKIE["lastSeenProds"])) {
-    setcookie("lastSeenProds",  "" . $id, time() + (86400 * 30), "/"); // 86400 = 1 day
-} else {
-    $products = $_COOKIE["lastSeenProds"] . "," . $id;
-    setcookie("lastSeenProds",  $products, time() + (86400 * 30), "/");
-}
 
+
+//Fetch Reviews
+$sql = "SELECT * FROM reviews WHERE productId = " . $productId;
+$reviews = $conn->query($sql);
 ?>
 <!DOCTYPE html>
 <html>
@@ -47,7 +53,7 @@ if (!isset($_COOKIE["lastSeenProds"])) {
                         <a class="nav-link" href="about.php">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="products.php">Products</a>
+                        <a class="nav-link active" href="marketplace.php">Marketplace</a>
                     </li>
 
                 </ul>
@@ -74,7 +80,48 @@ if (!isset($_COOKIE["lastSeenProds"])) {
                     <p>Price: ' . $price . '</p>';
                     ?>
 
+                    <form class="form-signin" method="post" action="AddReview.php">
+                        <h1 class="h3 mb-3 font-weight-normal">Add Review</h1>
+                        <label for="rating">Select a Rating (1-5)</label>
+                        <select name="rating" class="form-control" id="rating">
+                            <option value=1>1</option>
+                            <option value=2>2</option>
+                            <option value=3>3</option>
+                            <option value=4>4</option>
+                            <option value=5>5</option>
+                        </select>
+                        <?php echo '<input type="text" name="id" class="form-control" value="' . $productId . '" hidden>' ?>
+                        <input type="text" name="review" class="form-control" placeholder="Write a review" required>
+                        <button class="btn btn-lg btn-primary btn-block my-2" type="submit" name="addReview" value="addReview">Add Review</button>
+                    </form>
                 </div>
+            </div>
+            <br>
+            <div class="row my-2 row justify-content-evenly">
+                <table class="table">
+                    <tr>
+                        <th>Ratings</th>
+                        <th>Reviews</th>
+                    </tr>
+                    <?php
+
+                    if (!$reviews) {
+                        echo "No Reviews Found";
+                    } else {
+                        while ($row = $reviews->fetch_assoc()) {
+                            echo "<tr>";
+                            echo "<td>";
+                            echo $row["rating"];
+                            echo "</td>";
+                            echo "<td>";
+                            echo $row["review"];
+                            echo "</td>";
+                            echo "</tr>";
+                        }
+                    }
+
+                    ?>
+                </table>
             </div>
 
         </div>
